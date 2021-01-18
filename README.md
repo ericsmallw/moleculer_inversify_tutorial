@@ -11,6 +11,25 @@ This is a [Moleculer](https://moleculer.services/)-based microservices project. 
 - Install Docker https://www.docker.com/get-started
 - Run command `yarn dc:up`
 
+#### STEP 2 - Creating Auth Service And Installing Inversify
+- Install mongoist `yarn add mongoist`
+- Install bcrypt `yarn add bycrypt` then `yarn add @types/bcrypt`
+- Install randomstring `yarn add randomstring` then `yarn add @types/randomstring`
+- Install reflect-metadata `yarn add reflect-metadata`
+- Create a new folder in the services folder named shared-interfaces
+- Create a file in the shared-interfaces folder called IRestBase, which will contains the definitions for the basic CRUD functions
+- Create a new folder in the services folder named auth.
+- In the es lint file change "@typescript-eslint/no-empty-interface" from "error" to "warn"
+- Create a new file inside that folder called auth.service.ts, this can be based of the existing template service file
+greeter.services.ts
+- In the es lint file change "prefer-arrow/prefer-arrow-functions" from "error" to "warn"
+- Install inversify 
+- Add "experimentalDecorators": true to tsconfig compilerOptions - for inversify
+- Create proper interfaces and implementations in auth subfolders
+- Create db.ts folder and config folder with db login details
+- Create errors file in auth folder for standard error text.
+- Create inversify.config.ts file and define the concrete implementations of the interfaces
+
 ## Usage
 Start the project with `npm run dev` command. 
 After starting, open the http://localhost:3000/ URL in your browser. 
