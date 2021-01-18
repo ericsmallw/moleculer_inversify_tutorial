@@ -28,6 +28,7 @@ greeter.services.ts
 - Create proper interfaces and implementations in auth subfolders
 - Create db.ts folder and config folder with db login details
 - Create errors file in auth folder for standard error text.
+- Create error-types file in services folder to standard type definitions.
 - Create inversify.config.ts file and define the concrete implementations of the interfaces
 
 ## Usage
