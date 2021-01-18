@@ -3,4 +3,4 @@ import {config} from "./config";
 const mongoist = require("mongoist");
 
 const db = mongoist(config.connectionString);
-export const auth = db.auth;
+export const entry = db.entry;

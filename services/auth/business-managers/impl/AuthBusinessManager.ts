@@ -43,9 +43,9 @@ export default class AuthBusinessManager implements IAuthBusinessManager {
 			throw new Error(BadRequest);
 		}
 
-		const hash = this.generateHash(data.password);
+		const hash = await this.generateHash(data.password);
 
-		await this.authDataManager.create({email: data.email, hash});
+		await this.authDataManager.create({_id: data.email, hash});
 	}
 
 	private comparePassword(password: string, hash: string): Promise<any> {
